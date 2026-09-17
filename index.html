@@ -128,6 +128,33 @@
       width: 100%;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-channel {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      color: #25D366;
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .nav-channel:hover {
+      background: #25D366;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -4px rgba(37, 211, 102, 0.4);
+    }
+
     .nav-cta {
       background: #e01a1a;
       color: #fff;
@@ -270,6 +297,18 @@
       transform: translateY(-3px);
     }
 
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 8px 24px -6px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-whatsapp:hover {
+      background: #1eb954;
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -8px rgba(37, 211, 102, 0.5);
+    }
+
     .hero-image {
       display: flex;
       justify-content: center;
@@ -371,6 +410,40 @@
       border-color: rgba(224, 26, 26, 0.25);
     }
 
+    /* About Profile Image */
+    .about-profile-img {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #e01a1a;
+      box-shadow: 0 16px 40px -10px rgba(224, 26, 26, 0.45);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      position: relative;
+    }
+
+    .about-profile-img::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(224, 26, 26, 0.35);
+      pointer-events: none;
+    }
+
+    .about-profile-img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 20px 50px -10px rgba(224, 26, 26, 0.6);
+    }
+
+    .about-profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .about-me-box h2 {
       font-size: 32px;
       font-weight: 800;
@@ -444,6 +517,93 @@
     .social-btn.whatsapp:hover {
       box-shadow: 0 12px 28px -8px rgba(37, 211, 102, 0.5);
       transform: translateY(-3px);
+    }
+
+    .social-btn.channel {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border: none;
+      color: #fff;
+    }
+
+    .social-btn.channel:hover {
+      box-shadow: 0 12px 28px -8px rgba(18, 140, 126, 0.5);
+      transform: translateY(-3px);
+    }
+
+    /* === WHATSAPP CHANNEL BANNER === */
+    .channel-banner {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #0d1f18 50%, #0a0a0a 100%);
+      border-top: 1px solid rgba(37, 211, 102, 0.1);
+      border-bottom: 1px solid rgba(37, 211, 102, 0.1);
+    }
+
+    .channel-box {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(17, 30, 24, 0.7);
+      border: 1px solid rgba(37, 211, 102, 0.25);
+      border-radius: 28px;
+      padding: 44px 36px;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .channel-box:hover {
+      border-color: rgba(37, 211, 102, 0.5);
+      box-shadow: 0 20px 50px -15px rgba(37, 211, 102, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .channel-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .channel-box h3 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .channel-box h3 .highlight {
+      color: #25D366;
+    }
+
+    .channel-box p {
+      color: #a0a0a0;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .channel-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      padding: 16px 38px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+      box-shadow: 0 8px 24px -6px rgba(37, 211, 102, 0.5);
+      border: none;
+    }
+
+    .channel-btn:hover {
+      background: #1eb954;
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -8px rgba(37, 211, 102, 0.6);
     }
 
     /* === SERVICES / SKILLS SECTION === */
@@ -604,6 +764,13 @@
       font-size: 17px;
     }
 
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
     /* === FOOTER === */
     footer {
       background: #080808;
@@ -667,12 +834,19 @@
       color: #e01a1a;
     }
 
-    /* === FLOATING WHATSAPP === */
-    .whatsapp-float {
+    /* === FLOATING BUTTONS === */
+    .float-buttons {
       position: fixed;
       right: 26px;
       bottom: 26px;
       z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .whatsapp-float {
       background: #25D366;
       color: white;
       width: 58px;
@@ -690,6 +864,43 @@
     .whatsapp-float:hover {
       transform: scale(1.1) translateY(-4px);
       box-shadow: 0 20px 40px -8px rgba(37, 211, 102, 0.6);
+    }
+
+    .channel-float {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 12px 30px -6px rgba(18, 140, 126, 0.5);
+      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      position: relative;
+    }
+
+    .channel-float::after {
+      content: '📢';
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: #e01a1a;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #080808;
+    }
+
+    .channel-float:hover {
+      transform: scale(1.1) translateY(-4px);
+      box-shadow: 0 20px 40px -8px rgba(18, 140, 126, 0.6);
     }
 
     /* === RESPONSIVE === */
@@ -752,6 +963,11 @@
         display: none;
       }
 
+      .nav-channel {
+        padding: 7px 14px;
+        font-size: 12px;
+      }
+
       .hero h1 {
         font-size: 38px;
       }
@@ -773,7 +989,12 @@
       }
 
       .about-me-box {
-        padding: 32px 22px;
+        padding: 36px 22px;
+      }
+
+      .about-profile-img {
+        width: 120px;
+        height: 120px;
       }
 
       .about-me-box h2 {
@@ -782,6 +1003,14 @@
 
       .about-me-box p {
         font-size: 15px;
+      }
+
+      .channel-box {
+        padding: 32px 22px;
+      }
+
+      .channel-box h3 {
+        font-size: 22px;
       }
 
       .footer-grid {
@@ -814,6 +1043,20 @@
       .contact-box h3 {
         font-size: 24px;
       }
+
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .contact-buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .about-profile-img {
+        width: 110px;
+        height: 110px;
+      }
     }
 
     /* subtle fade */
@@ -841,8 +1084,8 @@
   <nav>
     <div class="container nav-inner">
       <a href="#" class="logo">
-        <span class=</span>
-        MASUD <span>DEVELOPER</span>
+        <span class="logo-icon">M</span>
+        MASUD <span>DEV</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
@@ -851,7 +1094,12 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Hire Me</a>
+      <div class="nav-right">
+        <a href="https://whatsapp.com/channel/0029VbDScpW7DAX1hrdOSY0u" target="_blank" rel="noopener" class="nav-channel">
+          📢 Channel
+        </a>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+      </div>
     </div>
   </nav>
 
@@ -870,7 +1118,7 @@
         </p>
         <div class="hero-buttons fade-up delay-3">
           <a href="#projects" class="btn btn-primary">🚀 View My Work</a>
-          <a href="#contact" class="btn btn-secondary">📩 Contact Me</a>
+          <a href="https://whatsapp.com/channel/0029VbDScpW7DAX1hrdOSY0u" target="_blank" rel="noopener" class="btn btn-whatsapp">📢 Join Channel</a>
         </div>
       </div>
       <div class="hero-image fade-up delay-2">
@@ -919,6 +1167,12 @@
   <section class="about-me-section" id="about">
     <div class="container">
       <div class="about-me-box fade-up">
+
+        <!-- Profile Image -->
+        <div class="about-profile-img">
+          <img src="/images/file_00000000020c7209933ce76045d72030.png" alt="Masudurrahman">
+        </div>
+
         <h2>About <span class="highlight">Me</span></h2>
         <p>
           Hi, I'm <strong>Masudurrahman</strong>, a passionate Web Designer and Developer.
@@ -939,7 +1193,26 @@
           <a href="https://wa.me/9838095956?text=Hello%20Masud%2C%20I%20need%20a%20website." target="_blank" rel="noopener" class="social-btn whatsapp">
             💬 WhatsApp
           </a>
+          <a href="https://whatsapp.com/channel/0029VbDScpW7DAX1hrdOSY0u" target="_blank" rel="noopener" class="social-btn channel">
+            📢 WhatsApp Channel
+          </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === WHATSAPP CHANNEL BANNER === -->
+  <section class="channel-banner">
+    <div class="container">
+      <div class="channel-box fade-up">
+        <span class="channel-icon">📢</span>
+        <h3>Join My <span class="highlight">WhatsApp Channel</span></h3>
+        <p>
+          Get daily updates, web design tips, project showcases and exclusive offers directly on your WhatsApp. Stay connected!
+        </p>
+        <a href="https://whatsapp.com/channel/0029VbDScpW7DAX1hrdOSY0u" target="_blank" rel="noopener" class="channel-btn">
+          📢 Follow Channel
+        </a>
       </div>
     </div>
   </section>
@@ -1003,9 +1276,14 @@
       <div class="contact-box fade-up">
         <h3>Start Your Website Project</h3>
         <p>Send me your requirements and I will discuss the project details with you.</p>
-        <a class="btn btn-primary"
-           href="https://wa.me/9838095956?text=Hello%20Masud%2C%20I%20want%20to%20discuss%20a%20website%20project."
-           target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+        <div class="contact-buttons">
+          <a class="btn btn-primary"
+             href="https://wa.me/9838095956?text=Hello%20Masud%2C%20I%20want%20to%20discuss%20a%20website%20project."
+             target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+          <a class="btn btn-whatsapp"
+             href="https://whatsapp.com/channel/0029VbDScpW7DAX1hrdOSY0u"
+             target="_blank" rel="noopener">📢 Join Channel</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1038,8 +1316,8 @@
           <ul>
             <li><a href="https://instagram.com/masud_official_013" target="_blank" rel="noopener">Instagram</a></li>
             <li><a href="https://wa.me/9838095956" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://whatsapp.com/channel/0029VbDScpW7DAX1hrdOSY0u" target="_blank" rel="noopener">WhatsApp Channel</a></li>
             <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">GitHub</a></li>
           </ul>
         </div>
       </div>
@@ -1049,13 +1327,21 @@
     </div>
   </footer>
 
-  <!-- === FLOATING WHATSAPP === -->
-  <a class="whatsapp-float"
-     href="https://wa.me/9838095956?text=Hello%20Masud%2C%20I%20need%20a%20website."
-     target="_blank" rel="noopener"
-     aria-label="Contact Masud on WhatsApp">
-    💬
-  </a>
+  <!-- === FLOATING BUTTONS === -->
+  <div class="float-buttons">
+    <a class="channel-float"
+       href="https://whatsapp.com/channel/0029VbDScpW7DAX1hrdOSY0u"
+       target="_blank" rel="noopener"
+       aria-label="Join WhatsApp Channel">
+      📢
+    </a>
+    <a class="whatsapp-float"
+       href="https://wa.me/9838095956?text=Hello%20Masud%2C%20I%20need%20a%20website."
+       target="_blank" rel="noopener"
+       aria-label="Contact Masud on WhatsApp">
+      💬
+    </a>
+  </div>
 
   <script>
     // Smooth scroll for anchor links
